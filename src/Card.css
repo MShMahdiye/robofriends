@@ -1,0 +1,106 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: serif;
+    
+}
+
+body{
+
+    margin : 100px;
+    margin-right: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(0deg,#00218A,#ff2079,#535EEB);
+    background-attachment: fixed;
+}
+
+.card{
+
+    position: relative;
+    width: 350px;
+    display: inline-flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 20px;
+    left: 70px;
+}
+
+.card:hover {
+
+    color: #BDBDFD;
+    text-shadow: 2px 3px #442b35;
+    transition: 0.3s;
+}
+
+.info::before{
+
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,
+              #fb0092,#0000ff,
+              #00ff00,#ffff00,
+              #fb0094,#0000ff,
+              #f00);
+    animation: animated 20s linear infinite;
+    background-size: 400%;
+    opacity: 0;
+    transition: 0.5s;
+    filter: blur(20px);
+    z-index: -1;
+
+}
+
+.info:hover::before,.info:hover::after {
+
+    opacity: 1;
+}
+
+@keyframes animated {
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 300% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+    
+.card .info {
+
+    position: relative;
+    background:#BDBDFD ;
+    display: block;
+    width: 310px;
+    height: 120px;
+    text-align: center;
+    justify-content: center;
+    background: rgba(83, 94, 235, 0.26);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.1px);
+    -webkit-backdrop-filter: blur(4.1px);
+    border: 1px solid rgba(83, 94, 235, 0.1);
+      
+}
+
+.info h2{
+
+    margin: 7%;
+
+}
+
+.font{
+
+    font-family: mandhor;
+}

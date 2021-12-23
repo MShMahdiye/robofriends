@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Fruktur');  
+.rtitle{
+
+  position: relative;
+  padding: 55px;
+  font-family: Fruktur;
+  font-size: 100px;
+  text-shadow: 4px 5px #150341;
+  background: -webkit-linear-gradient( #a00e5e,#170a35);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: flicker 1.5s infinite alternate;
+
+}
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow:
+      0 0 4px #ebcfea,
+      0 0 11px #cb1f5a,
+      0 0 19px #a00e5e,
+      0 0 40px #e92ef8,
+      0 0 80px #ff2079,
+      0 0 90px #440bd4,
+      0 0 100px #cb1f5a,
+      0 0 150px #01535f;
+  }
+  20%, 24%, 55% {       
+    text-shadow: none;
+  }
+}
+.group{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.leaflet-container {
+  width: 100vw;
+  height: 600px;
+}
+
+
+.modal {
+  width: 100%;
+  height: 500px; 
+  background-color: #ebcfea;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  z-index: 99000;
+}
+
+.hide{
+  color: #a00e5e;
+  cursor:pointer;
+  margin: 5px;
+  font-family: cursive;
+  z-index: 55000;
+}
+
+.overlay{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 5000;
+}
